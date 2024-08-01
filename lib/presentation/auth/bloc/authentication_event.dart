@@ -1,6 +1,20 @@
 part of 'authentication_bloc.dart';
 
-@freezed
-class AuthenticationEvent with _$AuthenticationEvent {
-  const factory AuthenticationEvent.started() = _Started;
+@immutable
+sealed class AuthenticationEvent extends Equatable{
+  const AuthenticationEvent();
+  @override
+  List<Object?> get props => [];
+}
+
+
+class TriggerEmailSignInRequest extends AuthenticationEvent {
+  final String email;
+  final String password;
+
+  const TriggerEmailSignInRequest(
+      {required this.email, required this.password});
+
+  @override
+  List<Object?> get props => [email, password];
 }

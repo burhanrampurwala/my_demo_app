@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo_app/common/resources/app_color.dart';
 
 import 'app_config/environment_variables.dart';
-import 'presentation/auth/page/login_screen.dart';
+import 'common/resources/route.dart';
+import 'presentation/auth/page/login_view.dart';
 
 Future<void> mainDelegateForEnvironments() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,10 +20,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Demo App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColor.colorPrimary),
+        appBarTheme: AppBarTheme(color: AppColor.colorPrimary),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      initialRoute: RouteName.routeSignIn,
+      onGenerateRoute: Routes.getRoute,
     );
   }
 }

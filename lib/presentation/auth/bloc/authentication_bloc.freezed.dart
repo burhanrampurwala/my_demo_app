@@ -15,188 +15,19 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$AuthenticationEvent {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $AuthenticationEventCopyWith<$Res> {
-  factory $AuthenticationEventCopyWith(
-          AuthenticationEvent value, $Res Function(AuthenticationEvent) then) =
-      _$AuthenticationEventCopyWithImpl<$Res, AuthenticationEvent>;
-}
-
-/// @nodoc
-class _$AuthenticationEventCopyWithImpl<$Res, $Val extends AuthenticationEvent>
-    implements $AuthenticationEventCopyWith<$Res> {
-  _$AuthenticationEventCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-}
-
-/// @nodoc
-abstract class _$$StartedImplCopyWith<$Res> {
-  factory _$$StartedImplCopyWith(
-          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
-      __$$StartedImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$StartedImplCopyWithImpl<$Res>
-    extends _$AuthenticationEventCopyWithImpl<$Res, _$StartedImpl>
-    implements _$$StartedImplCopyWith<$Res> {
-  __$$StartedImplCopyWithImpl(
-      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$StartedImpl implements _Started {
-  const _$StartedImpl();
-
-  @override
-  String toString() {
-    return 'AuthenticationEvent.started()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StartedImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() started,
-  }) {
-    return started();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? started,
-  }) {
-    return started?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? started,
-    required TResult orElse(),
-  }) {
-    if (started != null) {
-      return started();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Started value) started,
-  }) {
-    return started(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Started value)? started,
-  }) {
-    return started?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Started value)? started,
-    required TResult orElse(),
-  }) {
-    if (started != null) {
-      return started(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Started implements AuthenticationEvent {
-  const factory _Started() = _$StartedImpl;
-}
-
-/// @nodoc
 mixin _$AuthenticationState {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) =>
+  String get message => throw _privateConstructorUsedError;
+  bool get isRefresh => throw _privateConstructorUsedError;
+  TextEditingController get emailController =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) =>
+  TextEditingController get passwordController =>
       throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) =>
+  FocusNode get emailFocusNode => throw _privateConstructorUsedError;
+  FocusNode get passwordFocusNode => throw _privateConstructorUsedError;
+  bool get isPasswordInvalid => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $AuthenticationStateCopyWith<AuthenticationState> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -205,6 +36,15 @@ abstract class $AuthenticationStateCopyWith<$Res> {
   factory $AuthenticationStateCopyWith(
           AuthenticationState value, $Res Function(AuthenticationState) then) =
       _$AuthenticationStateCopyWithImpl<$Res, AuthenticationState>;
+  @useResult
+  $Res call(
+      {String message,
+      bool isRefresh,
+      TextEditingController emailController,
+      TextEditingController passwordController,
+      FocusNode emailFocusNode,
+      FocusNode passwordFocusNode,
+      bool isPasswordInvalid});
 }
 
 /// @nodoc
@@ -216,100 +56,218 @@ class _$AuthenticationStateCopyWithImpl<$Res, $Val extends AuthenticationState>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+    Object? isRefresh = null,
+    Object? emailController = null,
+    Object? passwordController = null,
+    Object? emailFocusNode = null,
+    Object? passwordFocusNode = null,
+    Object? isPasswordInvalid = null,
+  }) {
+    return _then(_value.copyWith(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      isRefresh: null == isRefresh
+          ? _value.isRefresh
+          : isRefresh // ignore: cast_nullable_to_non_nullable
+              as bool,
+      emailController: null == emailController
+          ? _value.emailController
+          : emailController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      passwordController: null == passwordController
+          ? _value.passwordController
+          : passwordController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      emailFocusNode: null == emailFocusNode
+          ? _value.emailFocusNode
+          : emailFocusNode // ignore: cast_nullable_to_non_nullable
+              as FocusNode,
+      passwordFocusNode: null == passwordFocusNode
+          ? _value.passwordFocusNode
+          : passwordFocusNode // ignore: cast_nullable_to_non_nullable
+              as FocusNode,
+      isPasswordInvalid: null == isPasswordInvalid
+          ? _value.isPasswordInvalid
+          : isPasswordInvalid // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ) as $Val);
+  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$AuthenticationStateImplCopyWith<$Res>
+    implements $AuthenticationStateCopyWith<$Res> {
+  factory _$$AuthenticationStateImplCopyWith(_$AuthenticationStateImpl value,
+          $Res Function(_$AuthenticationStateImpl) then) =
+      __$$AuthenticationStateImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String message,
+      bool isRefresh,
+      TextEditingController emailController,
+      TextEditingController passwordController,
+      FocusNode emailFocusNode,
+      FocusNode passwordFocusNode,
+      bool isPasswordInvalid});
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$AuthenticationStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$AuthenticationStateImplCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res, _$AuthenticationStateImpl>
+    implements _$$AuthenticationStateImplCopyWith<$Res> {
+  __$$AuthenticationStateImplCopyWithImpl(_$AuthenticationStateImpl _value,
+      $Res Function(_$AuthenticationStateImpl) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+    Object? isRefresh = null,
+    Object? emailController = null,
+    Object? passwordController = null,
+    Object? emailFocusNode = null,
+    Object? passwordFocusNode = null,
+    Object? isPasswordInvalid = null,
+  }) {
+    return _then(_$AuthenticationStateImpl(
+      message: null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      isRefresh: null == isRefresh
+          ? _value.isRefresh
+          : isRefresh // ignore: cast_nullable_to_non_nullable
+              as bool,
+      emailController: null == emailController
+          ? _value.emailController
+          : emailController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      passwordController: null == passwordController
+          ? _value.passwordController
+          : passwordController // ignore: cast_nullable_to_non_nullable
+              as TextEditingController,
+      emailFocusNode: null == emailFocusNode
+          ? _value.emailFocusNode
+          : emailFocusNode // ignore: cast_nullable_to_non_nullable
+              as FocusNode,
+      passwordFocusNode: null == passwordFocusNode
+          ? _value.passwordFocusNode
+          : passwordFocusNode // ignore: cast_nullable_to_non_nullable
+              as FocusNode,
+      isPasswordInvalid: null == isPasswordInvalid
+          ? _value.isPasswordInvalid
+          : isPasswordInvalid // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$AuthenticationStateImpl implements _AuthenticationState {
+  const _$AuthenticationStateImpl(
+      {required this.message,
+      required this.isRefresh,
+      required this.emailController,
+      required this.passwordController,
+      required this.emailFocusNode,
+      required this.passwordFocusNode,
+      required this.isPasswordInvalid});
+
+  @override
+  final String message;
+  @override
+  final bool isRefresh;
+  @override
+  final TextEditingController emailController;
+  @override
+  final TextEditingController passwordController;
+  @override
+  final FocusNode emailFocusNode;
+  @override
+  final FocusNode passwordFocusNode;
+  @override
+  final bool isPasswordInvalid;
 
   @override
   String toString() {
-    return 'AuthenticationState.initial()';
+    return 'AuthenticationState(message: $message, isRefresh: $isRefresh, emailController: $emailController, passwordController: $passwordController, emailFocusNode: $emailFocusNode, passwordFocusNode: $passwordFocusNode, isPasswordInvalid: $isPasswordInvalid)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$AuthenticationStateImpl &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.isRefresh, isRefresh) ||
+                other.isRefresh == isRefresh) &&
+            (identical(other.emailController, emailController) ||
+                other.emailController == emailController) &&
+            (identical(other.passwordController, passwordController) ||
+                other.passwordController == passwordController) &&
+            (identical(other.emailFocusNode, emailFocusNode) ||
+                other.emailFocusNode == emailFocusNode) &&
+            (identical(other.passwordFocusNode, passwordFocusNode) ||
+                other.passwordFocusNode == passwordFocusNode) &&
+            (identical(other.isPasswordInvalid, isPasswordInvalid) ||
+                other.isPasswordInvalid == isPasswordInvalid));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      message,
+      isRefresh,
+      emailController,
+      passwordController,
+      emailFocusNode,
+      passwordFocusNode,
+      isPasswordInvalid);
 
+  @JsonKey(ignore: true)
   @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-  }) {
-    return initial();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-  }) {
-    return initial?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-  }) {
-    return initial(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-  }) {
-    return initial?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    required TResult orElse(),
-  }) {
-    if (initial != null) {
-      return initial(this);
-    }
-    return orElse();
-  }
+  @pragma('vm:prefer-inline')
+  _$$AuthenticationStateImplCopyWith<_$AuthenticationStateImpl> get copyWith =>
+      __$$AuthenticationStateImplCopyWithImpl<_$AuthenticationStateImpl>(
+          this, _$identity);
 }
 
-abstract class _Initial implements AuthenticationState {
-  const factory _Initial() = _$InitialImpl;
+abstract class _AuthenticationState implements AuthenticationState {
+  const factory _AuthenticationState(
+      {required final String message,
+      required final bool isRefresh,
+      required final TextEditingController emailController,
+      required final TextEditingController passwordController,
+      required final FocusNode emailFocusNode,
+      required final FocusNode passwordFocusNode,
+      required final bool isPasswordInvalid}) = _$AuthenticationStateImpl;
+
+  @override
+  String get message;
+  @override
+  bool get isRefresh;
+  @override
+  TextEditingController get emailController;
+  @override
+  TextEditingController get passwordController;
+  @override
+  FocusNode get emailFocusNode;
+  @override
+  FocusNode get passwordFocusNode;
+  @override
+  bool get isPasswordInvalid;
+  @override
+  @JsonKey(ignore: true)
+  _$$AuthenticationStateImplCopyWith<_$AuthenticationStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
