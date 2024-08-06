@@ -1,21 +1,19 @@
-class SignedInUserResponseModel {
-  SignedInUserResponseModel({
-    this.status,
-    this.message,
-  });
+class TokenResponseModel {
+  final String token;
 
-  SignedInUserResponseModel.fromJson(dynamic json) {
-    status = json['status'];
-    message = json['message'];
+  TokenResponseModel({required this.token});
+
+  // Factory constructor to create an instance from a JSON map
+  factory TokenResponseModel.fromJson(Map<String, dynamic> json) {
+    return TokenResponseModel(
+      token: json['token'] as String,
+    );
   }
 
-  bool? status;
-  String? message;
-
+  // Method to convert an instance to a JSON map
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['status'] = status;
-    map['message'] = message;
-    return map;
+    return {
+      'token': token,
+    };
   }
 }

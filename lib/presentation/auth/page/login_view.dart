@@ -8,7 +8,6 @@ import '../../../common/functions/text_feild_validation.dart';
 import '../../../common/resources/app_color.dart';
 import '../../../common/resources/enum.dart';
 import '../../../common/resources/route.dart';
-import '../../../common/resources/styles.dart';
 import '../../../common/widgets/custom_loader.dart';
 import '../../../common/widgets/custom_text_field.dart';
 import '../../../common/widgets/toast.dart';

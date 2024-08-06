@@ -16,4 +16,8 @@ class AppStrings {
 
   static const String textfield_addPassword_emptyField_error = "Password field is required";
   static const String textfield_addPassword_invalid_error = "Please enter valid password";
+
+
+
+  static const String login_success_message = "You have successfully logged in";
 }

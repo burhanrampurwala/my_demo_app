@@ -6,5 +6,6 @@ class UrlPrefixes {
 
 class UrlSuffixes {
   //Example
-  static const String login_api = "/api/register";
+  static const String login_api = "/login";
 }
+
