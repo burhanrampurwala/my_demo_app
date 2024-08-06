@@ -10,15 +10,23 @@ class AuthenticationState with _$AuthenticationState {
     required FocusNode emailFocusNode,
     required FocusNode passwordFocusNode,
     required bool isPasswordInvalid,
+    required bool isPasswordVisible,
+    required bool isFailure,
+    required bool isLoading,
+    required bool isEmailInvalid,
   }) = _AuthenticationState;
 
-  factory AuthenticationState.initial() =>  AuthenticationState(
-        message: '',
+  factory AuthenticationState.initial() => AuthenticationState(
+        message: AppStrings.global_empty_string,
         isRefresh: false,
         emailController: TextEditingController(),
         emailFocusNode: FocusNode(),
         passwordController: TextEditingController(),
         passwordFocusNode: FocusNode(),
         isPasswordInvalid: false,
+        isPasswordVisible: false,
+        isFailure: false,
+        isLoading: false,
+        isEmailInvalid: false,
       );
 }

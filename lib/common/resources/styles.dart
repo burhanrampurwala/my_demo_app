@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_demo_app/common/dimensions/font_size.dart';
 import 'package:my_demo_app/common/resources/app_color.dart';
 
@@ -11,7 +12,7 @@ class Style {
   static TextStyle appBarTitleStyle({Color? color}) {
     return TextStyle(
       fontWeight: FontWeight.w400,
-      fontSize: title,
+      fontSize: 20.sp,
       color: color ?? AppColor.colorPrimary,
     );
   }

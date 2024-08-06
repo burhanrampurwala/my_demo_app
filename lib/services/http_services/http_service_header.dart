@@ -7,7 +7,6 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:my_demo_app/di/di.dart';
 
-import '../../app_config/environment_variables.dart';
 import '../../common/resources/enum.dart';
 import '../share_preferences_services/authentication_data.dart';
 

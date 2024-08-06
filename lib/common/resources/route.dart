@@ -10,9 +10,6 @@ class RouteName {
 
 class Routes {
   static Route<dynamic> getRoute(RouteSettings routeSettings) {
-    // final Arguments args = routeSettings.arguments as Arguments;
-    final args = routeSettings.arguments;
-
     switch (routeSettings.name) {
       case RouteName.routeSignIn:
         initAuthenticationModule();

@@ -25,6 +25,10 @@ mixin _$AuthenticationState {
   FocusNode get emailFocusNode => throw _privateConstructorUsedError;
   FocusNode get passwordFocusNode => throw _privateConstructorUsedError;
   bool get isPasswordInvalid => throw _privateConstructorUsedError;
+  bool get isPasswordVisible => throw _privateConstructorUsedError;
+  bool get isFailure => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isEmailInvalid => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AuthenticationStateCopyWith<AuthenticationState> get copyWith =>
@@ -44,7 +48,11 @@ abstract class $AuthenticationStateCopyWith<$Res> {
       TextEditingController passwordController,
       FocusNode emailFocusNode,
       FocusNode passwordFocusNode,
-      bool isPasswordInvalid});
+      bool isPasswordInvalid,
+      bool isPasswordVisible,
+      bool isFailure,
+      bool isLoading,
+      bool isEmailInvalid});
 }
 
 /// @nodoc
@@ -67,6 +75,10 @@ class _$AuthenticationStateCopyWithImpl<$Res, $Val extends AuthenticationState>
     Object? emailFocusNode = null,
     Object? passwordFocusNode = null,
     Object? isPasswordInvalid = null,
+    Object? isPasswordVisible = null,
+    Object? isFailure = null,
+    Object? isLoading = null,
+    Object? isEmailInvalid = null,
   }) {
     return _then(_value.copyWith(
       message: null == message
@@ -97,6 +109,22 @@ class _$AuthenticationStateCopyWithImpl<$Res, $Val extends AuthenticationState>
           ? _value.isPasswordInvalid
           : isPasswordInvalid // ignore: cast_nullable_to_non_nullable
               as bool,
+      isPasswordVisible: null == isPasswordVisible
+          ? _value.isPasswordVisible
+          : isPasswordVisible // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFailure: null == isFailure
+          ? _value.isFailure
+          : isFailure // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEmailInvalid: null == isEmailInvalid
+          ? _value.isEmailInvalid
+          : isEmailInvalid // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -116,7 +144,11 @@ abstract class _$$AuthenticationStateImplCopyWith<$Res>
       TextEditingController passwordController,
       FocusNode emailFocusNode,
       FocusNode passwordFocusNode,
-      bool isPasswordInvalid});
+      bool isPasswordInvalid,
+      bool isPasswordVisible,
+      bool isFailure,
+      bool isLoading,
+      bool isEmailInvalid});
 }
 
 /// @nodoc
@@ -137,6 +169,10 @@ class __$$AuthenticationStateImplCopyWithImpl<$Res>
     Object? emailFocusNode = null,
     Object? passwordFocusNode = null,
     Object? isPasswordInvalid = null,
+    Object? isPasswordVisible = null,
+    Object? isFailure = null,
+    Object? isLoading = null,
+    Object? isEmailInvalid = null,
   }) {
     return _then(_$AuthenticationStateImpl(
       message: null == message
@@ -167,6 +203,22 @@ class __$$AuthenticationStateImplCopyWithImpl<$Res>
           ? _value.isPasswordInvalid
           : isPasswordInvalid // ignore: cast_nullable_to_non_nullable
               as bool,
+      isPasswordVisible: null == isPasswordVisible
+          ? _value.isPasswordVisible
+          : isPasswordVisible // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isFailure: null == isFailure
+          ? _value.isFailure
+          : isFailure // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoading: null == isLoading
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEmailInvalid: null == isEmailInvalid
+          ? _value.isEmailInvalid
+          : isEmailInvalid // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -181,7 +233,11 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
       required this.passwordController,
       required this.emailFocusNode,
       required this.passwordFocusNode,
-      required this.isPasswordInvalid});
+      required this.isPasswordInvalid,
+      required this.isPasswordVisible,
+      required this.isFailure,
+      required this.isLoading,
+      required this.isEmailInvalid});
 
   @override
   final String message;
@@ -197,10 +253,18 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
   final FocusNode passwordFocusNode;
   @override
   final bool isPasswordInvalid;
+  @override
+  final bool isPasswordVisible;
+  @override
+  final bool isFailure;
+  @override
+  final bool isLoading;
+  @override
+  final bool isEmailInvalid;
 
   @override
   String toString() {
-    return 'AuthenticationState(message: $message, isRefresh: $isRefresh, emailController: $emailController, passwordController: $passwordController, emailFocusNode: $emailFocusNode, passwordFocusNode: $passwordFocusNode, isPasswordInvalid: $isPasswordInvalid)';
+    return 'AuthenticationState(message: $message, isRefresh: $isRefresh, emailController: $emailController, passwordController: $passwordController, emailFocusNode: $emailFocusNode, passwordFocusNode: $passwordFocusNode, isPasswordInvalid: $isPasswordInvalid, isPasswordVisible: $isPasswordVisible, isFailure: $isFailure, isLoading: $isLoading, isEmailInvalid: $isEmailInvalid)';
   }
 
   @override
@@ -220,7 +284,15 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
             (identical(other.passwordFocusNode, passwordFocusNode) ||
                 other.passwordFocusNode == passwordFocusNode) &&
             (identical(other.isPasswordInvalid, isPasswordInvalid) ||
-                other.isPasswordInvalid == isPasswordInvalid));
+                other.isPasswordInvalid == isPasswordInvalid) &&
+            (identical(other.isPasswordVisible, isPasswordVisible) ||
+                other.isPasswordVisible == isPasswordVisible) &&
+            (identical(other.isFailure, isFailure) ||
+                other.isFailure == isFailure) &&
+            (identical(other.isLoading, isLoading) ||
+                other.isLoading == isLoading) &&
+            (identical(other.isEmailInvalid, isEmailInvalid) ||
+                other.isEmailInvalid == isEmailInvalid));
   }
 
   @override
@@ -232,7 +304,11 @@ class _$AuthenticationStateImpl implements _AuthenticationState {
       passwordController,
       emailFocusNode,
       passwordFocusNode,
-      isPasswordInvalid);
+      isPasswordInvalid,
+      isPasswordVisible,
+      isFailure,
+      isLoading,
+      isEmailInvalid);
 
   @JsonKey(ignore: true)
   @override
@@ -250,7 +326,11 @@ abstract class _AuthenticationState implements AuthenticationState {
       required final TextEditingController passwordController,
       required final FocusNode emailFocusNode,
       required final FocusNode passwordFocusNode,
-      required final bool isPasswordInvalid}) = _$AuthenticationStateImpl;
+      required final bool isPasswordInvalid,
+      required final bool isPasswordVisible,
+      required final bool isFailure,
+      required final bool isLoading,
+      required final bool isEmailInvalid}) = _$AuthenticationStateImpl;
 
   @override
   String get message;
@@ -266,6 +346,14 @@ abstract class _AuthenticationState implements AuthenticationState {
   FocusNode get passwordFocusNode;
   @override
   bool get isPasswordInvalid;
+  @override
+  bool get isPasswordVisible;
+  @override
+  bool get isFailure;
+  @override
+  bool get isLoading;
+  @override
+  bool get isEmailInvalid;
   @override
   @JsonKey(ignore: true)
   _$$AuthenticationStateImplCopyWith<_$AuthenticationStateImpl> get copyWith =>

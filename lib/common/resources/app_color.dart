@@ -9,6 +9,12 @@ class AppColor {
   static Color colorPrimaryInverse = HexColor.fromHex("#FFFFFF");
   static Color colorTertiaryText = HexColor.fromHex("#7A7E89");
   static Color colorAbsent = Colors.transparent;
+  static Color colorTextFieldBorders = HexColor.fromHex('#CFD4DC');
+
+  static Color colorScaffold = HexColor.fromHex("#F0F7FC");
+
+  static Color colorSuccess = HexColor.fromHex('#12B76A');
+  static Color colorWarning = HexColor.fromHex('#F79009');
   static Color colorError = HexColor.fromHex('#F04438');
 }
 
